@@ -1,10 +1,10 @@
-# model scraping for themodelbot
+# model scraping for memebot
 
 import requests
 from bs4 import BeautifulSoup as bs
 import os
 
-# website with model images
+# website with meme images
 url = 'https://www.reddit.com/r/dankmemes/'
 
 # download page for parsing
@@ -14,7 +14,7 @@ soup = bs(page.text, 'html.parser')
 # locate all elements with image tag
 image_tags = soup.findAll('img')
 
-# create directory for model images
+# create directory for meme images
 if not os.path.exists('memes'):
     os.makedirs('memes')
 
